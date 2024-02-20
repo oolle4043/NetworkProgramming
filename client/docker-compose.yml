@@ -1,0 +1,13 @@
+version: '3.6'
+
+services:
+  my-client:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: client/clnt:1.0
+    hostname: client
+    restart: always
+    volumes:
+      - /home/oolle4043/client:/app/clnt
+

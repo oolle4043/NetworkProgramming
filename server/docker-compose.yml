@@ -1,0 +1,14 @@
+version: '3.6'
+
+services:
+  my-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: server/server:1.0
+    hostname: server
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - /home/oolle4043/server:/app/server
